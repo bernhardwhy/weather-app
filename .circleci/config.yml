@@ -2,8 +2,9 @@ version: 2
 jobs:
   build:
     working_directory: ~/WEbprojekte/weather-app/tutorial/tutorial
-    docker: 
-      -image: circleci/node:7
+    docker:
+      - image: circleci/node:7
     steps:
       - checkout
       - run: npm install
+      - run: npm test
